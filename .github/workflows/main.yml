@@ -15,7 +15,9 @@ jobs:
 
       - name: Determine version
         id: version
-        run: echo ::set-output name=VERSION::$(git describe --tags)
+        run: |
+          TAG=$(git describe --tags) || TAG="v0.1.0"
+          echo "::set-output name=VERSION::$TAG"
 
       - name: Create Release
         id: create_release
