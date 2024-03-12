@@ -1,1 +1,1 @@
-# actions-create-release v2
+# actions-create-release v3
